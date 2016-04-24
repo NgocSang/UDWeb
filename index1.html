@@ -1,0 +1,409 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<link href="boostrap/bootstrap.min.css" type="text/css" rel="stylesheet"/>
+		<link rel="stylesheet" href="boostrap/bootstrap-theme.min.css">
+        <script src="boostrap/jquery.min.js"></script>
+        <script src="boostrap/bootstrap.min.js"></script>
+		<title>
+			
+		</title>
+		<style type="text/css">
+			ul{
+				list-style: none;
+			}
+			*{
+				padding: 0px;
+				margin: 0px;
+			}
+			#profile{
+				width: 950px;
+				height:auto;
+				margin: auto;
+				border: 1px solid red;
+			}
+			#topcard{
+				width: 950px;
+				height: 244px;
+				border-bottom: 1px dashed black;
+			}
+			#profile-picture{
+				float: left;
+			}
+			#profile-overview{
+				float: left;
+				width: 698px;
+				height:auto;
+				border: 1px dotted black;
+
+			}
+			#profile-overview-content{
+				margin: 20px 0px 0px 30px;
+				width: 500px;
+				height: 200px;
+				border: 1px solid black;
+				float: left;
+			}
+			#profile-overview-content > #account > h1{
+				font-size: 20px;
+			}
+			.title{
+				font-size: 18px;
+			}
+			.link{
+				color: black;
+				text-decoration: none;
+			}
+			.link:hover{
+				color: red;
+				cursor: pointer;
+			}
+			#lis{
+				list-style-type: none;
+			}
+			#lis > li{
+				float: left;
+			}
+			#information{
+				text-align: left;
+				margin-top: 15px;
+			}
+			#information  tr  th{
+				font-weight: normal;
+				color: red;
+			}
+			#information  tr  th a{
+				color: #D3D3D3;
+				font-size: 15px;
+				font-weight: normal;
+				padding-right: 15px;
+				text-align: left;
+
+			}
+			#logo{
+				width:auto;
+				height: 30px;
+				border: 1px solid black;
+				float: right;
+				margin-top: 20px;
+				background: url("pictures/logo.png");
+				background-repeat: no-repeat;
+				padding-left: 25px;
+			}
+			#logo  a{
+				color: black;
+				font-size: 20px;
+				line-height: 30px;
+			}
+			#btn{
+		   		height: 28px ;
+		 	}
+		 	#container{
+		 		padding:10px 0px 0px 20px;
+		 		float: left;
+		 	}
+		 	#action-description{
+		 		float: left;
+		 		margin: 8px 0px 0px 10px;
+		 		width: 70px;
+		 	}
+		 	#flower-count{
+		 		font-size: 11px;
+			    color: #999;
+			    float: right;
+			    padding: 7px 0 0 10px;
+			    line-height: 15px;
+			    vertical-align: bottom;
+			    text-align: right;
+			    margin-top: 130px;
+		 	}
+		 	#flower-count strong{
+		 		font-weight: bold;
+			    display: block;
+			    color: #333;
+			    font-size: 18px;
+			    line-height: 14px;
+		 	}
+		 	#contact-info-section{
+		 		width: 100%;
+		 		height: 110px;
+		 		border: 1px solid black;
+		 	}
+		 	#contact-info-section .web th{
+		 		text-align:left;
+		 		font-weight: normal;
+		 	}
+		 	#internet-presence{
+		 		width: 242px;
+		 		height: 81px;
+		 		border: 1px solid black;
+		 		margin: 20px 0px 0px 20px;
+		 		
+		 	}
+		 	#profile-actions{
+		 		width: 100%;
+		 		height: 67px;
+		 		border:1px dashed black;
+		 		margin-top:10px;
+		 		clear: left;
+		 	}
+		 	#public-profile{
+		 		margin: 25px 0px 0px 22px;
+		 		width: 780px;
+		 		height: 40px;
+		 		border: 1px solid black;
+		 		line-height: 35px;
+		 		float: left;
+
+		 	}
+		 	#public-profile a{
+		 		color: #666;
+		 		font-size: 12px;
+		 		
+		 		background-image: url("pictures/logosmall1.png");
+		 		text-decoration: none;
+		 		background-repeat: no-repeat;
+		 		padding-left: 20px;
+		 	}
+		 	#public-profile a:hover{
+		 		color: red;
+		 		background-image: url("pictures/logosmall.png");
+		 	}
+		 	#show-more-info{
+		 		float: left;
+		 		width: 120px;
+		 		height: 40px;
+		 		margin: 25px 0px 0px 0px;
+		 		border: 1px solid black;
+		 		padding-left: 20px;
+		 		line-height: 40px;
+		 		cursor: pointer;
+		 	}
+		 	#show-more-info :hover{
+		 		color: red;
+		 	}
+		 	#profile-activity{
+		 		width: 660px;
+		 		height: 500px;
+		 		border: 1px solid green;
+		 		clear: left;
+		 		margin-top:100px;
+		 	}
+		 	#profile-activity h2{
+		 		padding:3px 0px 0px 20px;
+		 		background: #333;
+		 		color: white;
+		 		font-size: 13px;
+		 		width: 60px;
+		 	}
+		 	#marquee-header-container{
+		 		padding:22px 0px 0px 20px;
+		 	}
+		 	#marquee-header-container h4{
+		 		font-weight: normal;
+		 	}
+		 	#marquee-header-container a{
+		 		color: #96999c;
+		 	}
+		 	#influencer-posts-list{
+		 		width:auto;
+		 		height: 200px;
+		 		border: 1px solid red;
+		 		margin: 15px 0px 0px 0px;
+		 	}
+		 	#influencer-posts-list .influencer-info-wrapper{
+		 		margin-top:10px;
+		 	}
+		 	#influencer-posts-list .influencer-info-wrapper h5 a{
+		 		color: black;
+		 		font-size: 15px;
+		 		padding-top: 10px;
+		 		text-decoration: none;
+		 	}
+		 	#influencer-posts-list .influencer-info-wrapper h5 a:hover{
+		 		color: red;
+		 	}
+		 	#influencer-posts-list .influnencerpost{
+		 		float: left;
+		 		margin-right: 10px;
+		 		width: 195px;
+		 	}
+		 	#influencer-posts-list .influencer-info-wrapper span{
+		 		color: #96999c;
+		 	}
+		</style>
+
+		
+	</head>
+	<body>
+		<div id="profile">
+			<div id="topcard-file">
+				<div id="topcard">
+					<div id="profile-picture">
+						<img src="./pictures/avatar.png"/>
+					</div>
+					<div id="profile-overview">
+						<div id="profile-overview-content">
+							<div id="account">
+								<h1>Jeff Weiner</h1>
+								<p class="title">CEO at LinkedIn</p>
+								<a class="link" href="#">San Francisco Bay Area</a> |
+								<a class="link" href="#">Internet</a>
+								<table id="information">
+									<tr>
+										<th>
+											<a href="#">Current</a>
+										</th>
+										<td>
+											<ul id="lis">
+												<li>
+													<a class="link" href="#">Linkedln,</a>
+												</li>
+												<li>
+													<a class="link" href="#">Intuit,</a>
+
+												</li>
+												<li>
+													<a class="link" href="#">DonorsChoose</a>
+												</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th>
+											<a href="#">Previous</a>
+										</th>
+										<td>
+											<ul id="lis">
+												<li>
+													<a class="link" href="#">Malaria No More,</a>
+												</li>
+												<li>
+													<a class="link" href="#">Accel Partners,</a>
+
+												</li>
+												<li>
+													<a class="link" href="#">Greylock</a>
+												</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th>
+											<a href="#">Education</a>
+										</th>
+										<td>
+											<ul id="lis">
+												<li>
+													<a class="link" href="#">University of Pennsylvania - The Wharton School</a>
+												</li>
+												
+											</ul>
+										</td>
+									</tr>
+								</table>
+								<div id="container">
+								    <div class="row">
+								      <div class="btn-group">
+								        <button type="button" class="btn btn-primary">Follow</button>
+								        <button type="button" id="btn"class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								          <span class="caret"></span>
+								        </button>
+								        <ul class="dropdown-menu">
+								          <li><a href="#">View recent activity</a></li>
+								          <li><a href="#">Send Jeff InMail</a></li>
+								          <li><a href="#">Connect</a></li>
+								          <li role="separator" class="divider"></li>
+								          <li><a href="#">Share profile</a></li>
+								          <li><a href="#">Save to PDF</a></li>
+								          <li><a href="#">Block or report</a></li>
+								        </ul>
+								      </div>
+								    </div>
+								</div>
+								<div id="action-description">
+									<p>Know Jeff?
+									<a href="#">Connect</a>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div id="logo">
+							<a href="#">fluencer</a>
+						</div>
+						<div id="flower-count">
+							<strong>4,033,963</strong>
+							followers
+						</div>
+					</div>
+				</div>
+				<div id="contact-info-section">
+					<table id="internet-presence">
+						<tr class="web">
+							<th>
+								<img src="pictures/twitter.png"/>
+								Twitter
+							</th>
+							<td>
+								<a href="#">jeffweiner</a>
+							</td>
+						</tr>
+						<tr class="web">
+							<th>
+								<img src="pictures/web.png"/>
+								Website
+							</th>
+						</tr>
+					</table>
+					<div id="profile-actions">
+						<div id="public-profile">
+							<a href="#">https://www.linkedin.com/in/jeffweiner08</a>
+						</div>
+						<div id="show-more-info">
+							<img src="pictures/folder.png"/>
+							<span>Contact Info</span>
+						</div>
+					</div>
+				</div>
+				<div id="profile-activity">
+					<h2>Posts</h2>
+					<div id="marquee-header-container">
+						<h4>Published by Jeff</h4>
+						<a href="#">See more</a>
+						<img src="pictures/arrowright.png"/>
+						<ul id="influencer-posts-list">
+							<li class="influnencerpost">
+								<a href="#">
+									<img src="pictures/slider1.jpg">
+								</a>
+								<div class="influencer-info-wrapper">
+									<h5><a href="#">My Interview with Oprah</a></h5>
+									<span>October 15,2015</span>
+								</div>
+							</li>
+							<li class="influnencerpost">
+								<a href="#">
+									<img src="pictures/slider2.jpg">
+								</a>
+								<div class="influencer-info-wrapper">
+									<h5><a href="#">Always Be Learning: LinkedIn to Acquire lynda.com</a></h5>
+									<span>April 9, 2015</span>
+								</div>
+							</li>
+							<li class="influnencerpost">
+								<a href="#">
+									<img src="pictures/slider3.jpg">
+								</a>
+								<div class="influencer-info-wrapper">
+									<h5><a href="#">How LinkedIn is Helping Power the President's...</a></h5>
+									<span>March 10, 2015</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>
