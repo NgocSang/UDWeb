@@ -1,0 +1,448 @@
+
+  ul{
+    list-style: none;
+  }
+  *{
+    padding: 0px;
+    margin: 0px;
+  }
+  body{
+    background: #e9e9e9;
+  }
+  #profile{
+    width: 900px;
+    height:auto;
+    margin: auto;
+
+  }
+  .accordion-group{
+    background: white;
+  }
+  #topcard{
+    width: 900px;
+    height: 244px;
+    border: 1px solid #e5e5e5;
+    border-bottom: none;
+    background: white;
+  }
+  #profile-picture{
+    float: left;
+  }
+  #profile-overview{
+    float: left;
+    width: 648px;
+    height:auto;
+
+  }
+  #profile-overview-content{
+    margin: 20px 0px 0px 30px;
+    width: 500px;
+    height: 200px;
+    float: left;
+  }
+  #profile-overview-content > #account > h1{
+    font-size: 20px;
+  }
+  .title{
+    font-size: 18px;
+  }
+  .link{
+    color: black;
+    text-decoration: none;
+  }
+  .link:hover{
+    color: red;
+    cursor: pointer;
+  }
+  #lis{
+    list-style-type: none;
+  }
+  #lis > li{
+    float: left;
+  }
+  #information{
+    text-align: left;
+    margin-top: 15px;
+  }
+  #information  tr  th{
+    font-weight: normal;
+    color: red;
+  }
+  #information  tr  th a{
+    color: #D3D3D3;
+    font-size: 15px;
+    font-weight: normal;
+    padding-right: 15px;
+    text-align: left;
+
+  }
+  #logo{
+    width:80px;
+    height: 30px;
+    float: right;
+    margin-top: 20px;
+    background: url("pictures/logo.png");
+    background-repeat: no-repeat;
+    padding-left: 25px;
+  }
+  #logo  a{
+    color: black;
+    font-size: 20px;
+    line-height: 30px;
+  }
+  #btn{
+      height: 28px ;
+  }
+  .btn-primary + .tooltip > .tooltip-inner{background:#ffffff;color: black;
+      width: 200px;
+      height: 50px;
+      text-align: center;
+      font-size: 14px;
+      padding-top: 20px;
+      font-weight: bold;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    }
+    .btn-primary + .tooltip > .tooltip-arrow { border-bottom-color:#999; }
+  #container{
+    padding:10px 0px 0px 20px;
+    float: left;
+  }
+  #action-description{
+    float: left;
+    margin: 8px 0px 0px 10px;
+    width: 180px;
+  }
+  #flower-count{
+    font-size: 11px;
+      color: #999;
+      float: right;
+      padding: 7px 0 0 10px;
+      line-height: 15px;
+      vertical-align: bottom;
+      text-align: right;
+      margin-top: 130px;
+
+  }
+  #flower-count strong{
+    font-weight: bold;
+      display: block;
+      color: #333;
+      font-size: 18px;
+      line-height: 14px;
+  }
+  #contact-info-section{
+    width: 100%;
+    height: 110px;
+
+  }
+  #contact-info-section .web th{
+    text-align:left;
+    font-weight: normal;
+  }
+  #internet-presence{
+    width: 242px;
+    height: 81px;
+    margin: 20px 0px 0px 20px;
+
+  }
+  #profile-actions{
+    width: 100%;
+    height: 40px;
+    clear: left;
+    border-top: 1px dashed black;
+  }
+  #public-profile{
+    width: 730px;
+    height: 40px;
+    line-height: 35px;
+    margin-left: 20px;
+    float: left;
+
+  }
+  #public-profile a{
+    color: #666;
+    font-size: 12px;
+
+    background-image: url("pictures/logosmall1.png");
+    text-decoration: none;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+  }
+  #public-profile a:hover{
+    color: red;
+    background-image: url("pictures/logosmall.png");
+  }
+  #show-more-info{
+    float: left;
+    width: 120px;
+    height: 40px;
+    padding-left: 20px;
+    line-height: 40px;
+    cursor: pointer;
+    border-left: 1px solid black;
+  }
+  #show-more-info :hover{
+    color: red;
+  }
+  #profile-activity{
+    width:100%;
+    height: 360px;
+    border: 1px solid #e5e5e5;
+    clear: left;
+    margin-top:20px;
+    background: white;
+  }
+  #profile-activity h2{
+    padding:3px 0px 0px 20px;
+    background: #333;
+    color: white;
+    font-size: 13px;
+    width: 60px;
+  }
+  #marquee-header-container{
+    padding:22px 0px 0px 20px;
+    background: #F5F5F5;
+  }
+  #marquee-header-container h4{
+    font-weight: normal;
+  }
+  #marquee-header-container a{
+    color: #96999c;
+  }
+  #influencer-posts-list{
+    width:auto;
+    height: 230px;
+    margin: 15px 0px 0px 0px;
+
+  }
+  #influencer-posts-list .influencer-info-wrapper{
+    margin-top:10px;
+  }
+  #influencer-posts-list .influencer-info-wrapper h5 a{
+    color: black;
+    font-size: 15px;
+    padding-top: 10px;
+    text-decoration: none;
+  }
+  #influencer-posts-list .influencer-info-wrapper h5 a:hover{
+    color: red;
+  }
+  #influencer-posts-list .influnencerpost{
+    float: left;
+    margin-right: 10px;
+    width: 195px;
+  }
+  #influencer-posts-list .influencer-info-wrapper span{
+    color: #96999c;
+  }
+  #background{
+    width: 100%;
+    height: auto;;
+    border: 1px solid green;
+    margin-top: 10px;
+    background: white;
+  }
+  #background h2{
+    padding:3px 0px 0px 20px;
+    background: #333;
+    color: white;
+    font-size: 13px;
+    width: 100px;
+  }
+  .summary-header{
+    width: 600px;
+    height: 50px;
+    margin: 10px 0px 10px 20px;
+  }
+  .summary-header h3{
+    display: inline;
+    line-height: 50px;
+    font-size: 18px;
+    font-weight: normal;
+    color: #434649;
+    margin-left: 9px;
+  }
+  #sumary-item{
+    margin: 5px 20px 10px 30px;
+    width: 90%;
+    height: auto;
+    border-bottom: 1px dashed black;
+    padding-bottom: 20px;
+  }
+  #experience-view{
+    width: 620px;
+    overflow: hidden;
+    display: block;
+    height: auto;
+    border: 1px solid yellow;
+    margin: 30px 0px 10px 20px;
+
+  }
+  .experience-logo{
+    float: right;
+    margin:0px 30px 10px 0px;
+  }
+  .experience-link{
+    float: left;
+    margin:0px 0px 10px 0px;
+  }
+  .experience-link h4 a{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  .experience-link h4 a:hover{
+    color: red;
+  }
+  .experience-link span strong a{
+    font-size: 15px;
+    font-weight: normal;
+    color: #434649;
+    text-decoration: none;
+  }
+  .experience-link span strong a:hover{
+    color: red;
+  }
+  .sumary-field-show-more{
+    clear: left;
+
+  }
+  .media-data{
+    width: auto;
+    height:auto;
+    cursor: pointer;
+    margin-top: 10px;
+    border: 1px solid black;
+    float: left;
+    margin-right: 10px;
+    padding-bottom: 10px;
+    background: #434649;
+  }
+  .media-data p{
+    padding: 10px 0px 0px 10px;
+  }
+  .media-data:hover{
+    border: 1px solid red;
+  }
+  #seemore{
+    clear: left;
+    margin: 0px 0px 10px 20px;
+    width: 620px;
+    height: 400px;
+
+  }
+  #seemore a{
+    padding-left: 150px;
+  }
+  #see{
+    margin: 0px 0px 10px 20px;
+    width: 620px;
+    height: 25px;
+    border: 1px solid red;
+    text-align: center;
+  }
+
+  .experience-Director{
+  	width: 95%;
+    overflow: hidden;
+    display: block;
+    height: auto;
+    margin: 30px 0px 10px 20px;
+    padding: 20px;
+    border-bottom: 1px solid black;
+  }
+  #background-experience-container{
+  	width: 95%;
+    height: auto;
+    overflow: hidden;
+    display: block;
+    margin: 10px 10px 0px 10px;
+  }
+  #background-skill{
+  	width: 630px;
+    overflow: hidden;
+    display: block;
+    height: auto;
+    margin: 30px 0px 10px 10px;
+  }
+  #profile-skill h4{
+    font-size: 14px;
+    font-weight: normal;
+    color: #434649;
+    margin: 30px 0px 10px 20px;
+  }
+
+  .item-skill{
+
+  	width: 30px;
+  	height: 30px;
+  	line-height: 30px;
+  	font-weight: bold;
+  	text-align: center;
+  	color: white;
+  	background: #56ffff;
+  	float: left;
+  }
+  .skill-pill{
+  	width: auto;
+  	padding:0px 10px 0px 10px;
+  	line-height: 30px;
+  	height: 30px;
+  	background: #e5e5e5;
+  	color: black;
+  	float: left;
+  }
+  #list-skill li{
+  	width: auto;
+  	height: 30px;
+  	clear: left;
+  	margin-top:10px;
+  }
+  #skill-section li{
+  	margin: 10px 10px 0px 0px;
+  	width: auto;
+  	height: 30px;
+  	float: left;
+  }
+  #skill-section{
+  	width: auto;
+  	overflow: hidden;
+    display: block;
+    height: auto;
+  	margin-bottom: 30px;
+  }
+  #background-education{
+  	width: 95%;
+  	height: auto;
+  	margin: 30px 10px 10px 10px;
+  }
+ .content-education{
+ 	  width: auto;
+ 	  clear: left;
+    overflow: hidden;
+    display: block;
+    height: auto;
+    padding-bottom: 20px;
+    border-bottom: 1px solid black;
+    margin:20px 0px 0px 20px;
+ }
+#background-Project{
+   	width: 95%;
+   	clear: left;
+    overflow: hidden;
+    display: block;
+    height: auto;
+
+    margin:0px 20px 20px 10px;
+ }
+.content-project{
+ 	  width: 95%;
+ 	  clear: left;
+    overflow: hidden;
+    display: block;
+    height: auto;
+    margin:10px 0px 0px 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid black;
+ }
