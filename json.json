@@ -1,7 +1,7 @@
 {
 	"name": "Nguyễn Ngọc Sáng",
 	"birthdate": "14/03/1995",
-	"avatar": "pictures/1312485.jpg",
+	"avatar": "pictures/avatar.png",
 	"country": "Việt Nam",
 	"Job": "Student",
 	"contact": {
@@ -16,26 +16,28 @@
 	"experiences": [{
 		"position": "Developer",
 		"company": "HCMUS",
-		"Logo": "picture/logo.png",
+		"Logo": "pictures/Greylock.png",
 		"time": "September 2013",
-		"Describe": "Connecting the world's professionals to make them more productive and successful."
+		"Describe": "BGCP serves youth in grades K–12 at nine locations: three clubhouses and six school sites in East Palo Alto, Menlo Park, and Redwood City, where over half the youth drop out of high school. While most youth development organizations select the young people whom they serve, BGCP serves all youth. The organization has grown rapidly over the past five years and now serves 2,000 active members at its nine sites."
 	}, {
 		"position": "Tester",
 		"company": "HCMUS",
-		"Logo": "picture/logo.png",
+		"Logo": "pictures/logo.png",
 		"time": "September 2013",
-		"Describe": "Connecting the world's professionals to make them more productive and successful."
+		"Describe": "BGCP serves youth in grades K–12 at nine locations: three clubhouses and six school sites in East Palo Alto, Menlo Park, and Redwood City, where over half the youth drop out of high school. While most youth development organizations select the young people whom they serve, BGCP serves all youth. The organization has grown rapidly over the past five years and now serves 2,000 active members at its nine sites."
 	}],
 	"projects": [{
 		"name": "Game car",
+		"Logo": "pictures/Yahoo.png",
 		"time": "October 2014",
-		"Describe": "Baker & Taylor has the stated goal of having a best-of-breed B2B eCommerce site that will enable all of their cu"
+		"Describe": "BGCP serves youth in grades K–12 at nine locations: three clubhouses and six school sites in East Palo Alto, Menlo Park, and Redwood City, where over half the youth drop out of high school. While most youth development organizations select the young people whom they serve, BGCP serves all youth. The organization has grown rapidly over the past five years and now serves 2,000 active members at its nine sites."
 	}, {
 		"name": "Game caro",
+		"Logo": "pictures/Donors.png",
 		"time": "October 2015",
-		"Describe": "Baker & Taylor has the stated goal of having a best- "
+		"Describe": "Baker & Taylor has the stated goal of having a best-of-breed B2B eCommerce site that will enable all of their cu"
 	}],
-	"skill": [
+	"skills": [
 		"C sharp",
 		"C/C++",
 		"Nodejs",
@@ -43,16 +45,22 @@
 		"Python",
 		"HTML/CSS"
 	],
-	"education": [{
+	"differentskills":[
+		"Sing",
+		"Play sport",
+		"Play guitar",
+		"Presentation"
+	],
+	"educations": [{
 			"name": " University HCMUS",
 			"major": "information system",
 			"graduate": "September 2017",
-			"logo": "picture/logo.png"
+			"logo": "pictures/logo.png"
 		}, {
 			"name": "hight school",
 			"major": "student",
 			"graduate": "September 2013",
-			"logo": "picture/logo.png"
+			"logo": "pictures/logo.png"
 		}
 
 	]
