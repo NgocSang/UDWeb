@@ -12,28 +12,28 @@
 	"linklinke"	: "https:////www.linkedin.com//nguyenngocsang143",
 	"linkface"	:	"https:////www.facebook.com//nguyenngocsang143",
 	"address": "725 Lê Hồng Phong Quận 10 TP Hồ Chí Minh",
-	"summary": "As a 3th student in Ho Chi Minh city University of Science (HCMUS) and always keeping moving forward in studying and researching the newtechnology, with ambition of C Language Programming, what I have builtfor myself during student period is an individual with ability to construct the embedded system and system software. After graduating in HCMUS, I want to learn master and become a teacher so I always try my best to get good academic performance. I also participated in organizing many useful activities for IT student as a leader organizers. I have being trained myself to develop a supportive and result-oriented team as well as have 4spirit of cooperation and ability in teamwork.",
+	"summary":"As a 3th student in Ho Chi Minh city University of Science (HCMUS) and always keeping moving forward in studying and researching the newtechnology, with ambition of C Language Programming,\nwhat I have builtfor myself during student period is an individual with ability to construct the embedded system and system software.\nAfter graduating in HCMUS, I want to learn master and become a teacher so I always try my best to get good academic performance.\nI also participated in organizing many useful activities for IT student as a leader organizers. I have being trained myself to develop a supportive and result-oriented team as well as have 4spirit of cooperation and ability in teamwork.",
 	"experiences": [{
 		"position": "Developer",
 		"company": "HCMUS",
-		"Logo": "pictures/Greylock.png",
+		"Logo": "http://www.hcmus.edu.vn/images/stories/logo-khtn.png",
 		"time": "September 2013",
 		"Describe": "BGCP serves youth in grades K–12 at nine locations: three clubhouses and six school sites in East Palo Alto, Menlo Park, and Redwood City, where over half the youth drop out of high school. While most youth development organizations select the young people whom they serve, BGCP serves all youth. The organization has grown rapidly over the past five years and now serves 2,000 active members at its nine sites."
 	}, {
 		"position": "Tester",
 		"company": "HCMUS",
-		"Logo": "pictures/logo.png",
+		"Logo": "http://www.hcmus.edu.vn/images/stories/logo-khtn.png",
 		"time": "September 2013",
 		"Describe": "BGCP serves youth in grades K–12 at nine locations: three clubhouses and six school sites in East Palo Alto, Menlo Park, and Redwood City, where over half the youth drop out of high school. While most youth development organizations select the young people whom they serve, BGCP serves all youth. The organization has grown rapidly over the past five years and now serves 2,000 active members at its nine sites."
 	}],
 	"projects": [{
 		"name": "Game car",
-		"Logo": "pictures/Yahoo.png",
+		"Logo": "http://www.hcmus.edu.vn/images/stories/logo-khtn.png",
 		"time": "October 2014",
 		"Describe": "BGCP serves youth in grades K–12 at nine locations: three clubhouses and six school sites in East Palo Alto, Menlo Park, and Redwood City, where over half the youth drop out of high school. While most youth development organizations select the young people whom they serve, BGCP serves all youth. The organization has grown rapidly over the past five years and now serves 2,000 active members at its nine sites."
 	}, {
 		"name": "Game caro",
-		"Logo": "pictures/Donors.png",
+		"Logo": "http://www.hcmus.edu.vn/images/stories/logo-khtn.png",
 		"time": "October 2015",
 		"Describe": "Baker & Taylor has the stated goal of having a best-of-breed B2B eCommerce site that will enable all of their cu"
 	}],
@@ -55,12 +55,14 @@
 			"name": " University HCMUS",
 			"major": "information system",
 			"graduate": "September 2017",
-			"logo": "pictures/logo-khtn.png"
+			"logo": "http://www.hcmus.edu.vn/images/stories/logo-khtn.png",
+			"Describe": "Baker & Taylor has the stated goal of having a best-of-breed B2B eCommerce site that will enable all of their cu"
 		}, {
-			"name": "hight school",
+			"name": "Hight school",
 			"major": "student",
 			"graduate": "September 2013",
-			"logo": "pictures/logo.png"
+			"logo": "http://www.hcmus.edu.vn/images/stories/logo-khtn.png",
+			"Describe": "Baker & Taylor has the stated goal of having a best-of-breed B2B eCommerce site that will enable all of their cu"
 		}
 
 	]

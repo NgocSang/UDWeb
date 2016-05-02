@@ -252,19 +252,20 @@
               <div class="summary-header">
                 <img src="pictures/borrow1.png"/>
                 <h3> Experience</h3>
-                <button class="edit-add" title="Click to add a new position" data-add-type="background-experience" data-trk="{ "componentKey" : "profile-edit-position-form", "source" : "prof-edit-background-add_position-link" }" onclick="DisplayExperence()">+ Add Expression</button>
+                <button class="edit-add" title="Click to add a new position" data-add-type="background-experience" data-trk="{ "componentKey" : "profile-edit-position-form", "source" : "prof-edit-background-add_position-link" }" ng-click="editexperence(-1)">+ Add Expression</button>
               </div>
 
-              <div class="content-experience">
-                <form>
-                  <b>Company Name:</b><input  type="text"></input>
-                  <b>Title:</b><input type="text"></input>
-                  <b>Location:</b><input type="text"></input>
-                  <b>Time Period:</b><input type="text"></input>
-                  <b>Description:</b><textarea style="width:95%;height:200px;"></textarea>
+              <div class="content-experience" ng-show="displayexperene">
+                <form name="myForm">
+                  <b>Company Name:</b><input  type="text" ng-model="edit_company" required></input>
+                  <b>Logo:</b><input type="url" name="pic" accept="image/*" ng-model="edit_logo" ></input>
+                  <b>Location:</b><input type="text" ng-model="edit_location" required></input>
+                  <b>Time Period:</b><input type="text" ng-model="edit_time" required></input>
+                  <b>Description:</b><textarea style="width:95%;height:200px;" ng-model="edit_describe" required></textarea>
+                  <button  class="btn btn-primary" type="submit" ng-click="saveexperene(index)" ng-disabled="myForm.$invalid">Save</button>
+                  <button  class="btn" ng-click="displayexperene = false">Cancle</button>
                 </form>
-                <button  class="btn btn-primary">Save</button>
-                <button  class="btn" onclick="CancelExperence()">Cancle</button>
+
               </div>
               <div class="experience-Director"ng-repeat="experience in mydata.experiences">
             	<div class = "experience-logo">
@@ -275,7 +276,7 @@
                   </a>
                 </div>
                 <div class="experience-link">
-                  <h4><a href="#">{{experience.position}}</a></h4>
+                  <h4><a href="#">{{experience.position}}</a><a href="#background-experience-container"><button id="edit" ng-click="editexperence($index)"></button></a></h4>
                   <span><strong><a href="#">{{experience.company}}</a></strong></span>
                   <br>
                   <span>{{experience.time}}</span>
@@ -291,7 +292,20 @@
     			<div class="summary-header">
     				<img src="pictures/project.png"/>
     				<h3>Project</h3>
+            <button class="edit-add" title="Click to add a new Project" data-add-type="background-Project" data-trk="{ "componentKey" : "profile-edit-position-form", "source" : "prof-edit-background-add_position-link" }" ng-click="editproject(-1)">+ Add Project</button>
     			</div>
+          <div class="content-experience" ng-show="displayproject">
+            <form name="myFormproject">
+              <b>Project Name:</b><input  type="text" ng-model="edit_project" required></input>
+              <b>Logo:</b><input type="url" name="pic" accept="image/*" ng-model="edit_logoproject" ></input>
+
+              <b>Date:</b><input type="text" ng-model="edit_timeproject" required></input>
+              <b>Description:</b><textarea style="width:95%;height:200px;" ng-model="edit_describeproject" required></textarea>
+              <button  class="btn btn-primary" type="submit" ng-click="saveproject(indexproject)" ng-disabled="myFormproject.$invalid">Save</button>
+              <button  class="btn" ng-click="displayproject = false">Cancle</button>
+            </form>
+
+          </div>
     			<div class="content-project" ng-repeat="project in mydata.projects">
               		<div class = "experience-logo">
 	                  <a href="#">
@@ -302,7 +316,7 @@
 	                  </a>
 	                </div>
 	              	<div class="experience-link">
-	                  <h4><a href="#">{{project.name}}</a></h4>
+	                  <h4><a href="#">{{project.name}}</a><a href="#background-Project"><button id="edit" ng-click="editproject($index)"></button></a></h4>
 	                  <br>
 	                  <span><time>{{project.time}}</time></span>
 	                </div>
@@ -338,25 +352,40 @@
     		</div>
     		<div id="background-education">
     			<div class="summary-header">
-	                <img src="pictures/education.png"/>
-	                <h3> Education</h3>
+            <img src="pictures/education.png"/>
+            <h3> Education</h3>
+            <button class="edit-add" title="Click to add a new Education" data-add-type="background-education" data-trk="{ "componentKey" : "profile-edit-position-form", "source" : "prof-edit-background-add_position-link" }" ng-click="editeducation(-1)">+ Add Education</button>
+        	</div>
+          <div class="content-experience" ng-show="displayeducation">
+            <form name="myFormeducation">
+              <b>School Name:</b><input  type="text" ng-model="edit_education" required></input>
+              <b>Logo:</b><input type="url" name="pic" accept="image/*" ng-model="edit_logoeducation" ></input>
+              <b>Major:</b><input  type="text" ng-model="edit_major" required></input>
+              <b>graduate:</b><input type="text" ng-model="edit_timeeducation" required></input>
+              <b>Description:</b><textarea style="width:95%;height:200px;" ng-model="edit_describeeducation" required></textarea>
+              <button  class="btn btn-primary" type="submit" ng-click="saveeducation(indexeducation)" ng-disabled="myFormeducation.$invalid">Save</button>
+              <button  class="btn" ng-click="displayeducation = false">Cancle</button>
+            </form>
 
-              	</div>
-              	<div class="content-education" ng-repeat="education in mydata.educations">
-              		<div class = "experience-logo">
-	                  <a href="#">
-	                    <strong>
-	                      <img src="{{education.logo}}" width="60" height="60"/>
-	                    </strong>
-	                  </a>
-	                </div>
-	              	<div class="experience-link">
-	                  <h4><a href="#">{{education.name}}</a></h4>
-	                  <span><strong><a href="#">{{education.major}}</a></strong></span>
-	                  <br>
-	                  <span><time>{{education.graduate}}</time></span>
-	                </div>
-	             </div>
+          </div>
+        	<div class="content-education" ng-repeat="education in mydata.educations">
+        		<div class = "experience-logo">
+              <a href="#">
+                <strong>
+                  <img src="{{education.logo}}" width="60" height="60"/>
+                </strong>
+              </a>
+            </div>
+          	<div class="experience-link">
+              <h4><a href="#">{{education.name}}</a><a href="#background-education"><button id="edit" ng-click="editeducation($index)"></button></a></h4>
+              <span><strong><a href="#">{{education.major}}</a></strong></span>
+              <br>
+              <span><time>{{education.graduate}}</time></span>
+            </div>
+            <div class="sumary-field-show-more">
+              <pre>{{education.Describe}}</pre>
+          </div>
+         </div>
     		</div>
     				</div>
     			</div>
