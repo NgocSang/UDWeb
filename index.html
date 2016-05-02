@@ -4,28 +4,15 @@
     <link href="boostrap/bootstrap.min.css" type="text/css" rel="stylesheet"/>
     <link rel="stylesheet" href="boostrap/bootstrap-theme.min.css">
     <link href="css.css" type="text/css" rel="stylesheet"/>
-    <script src="boostrap/jquery.min.js"></script>
-    <script src="boostrap/bootstrap.min.js"></script>
+  	<script src="boostrap/jquery.min.js"></script>
+  	<script src="boostrap/bootstrap.min.js"></script>
     <script src="angular.min.js"></script>
     <script src="script.js"></script>
+    <script src="javascript.js"></script>
     <title>
 
     </title>
-    <script type="text/javascript">
-      $(document).ready(function(){
-        $("button").tooltip();
-    });
-      $('.SeeMore2').click(function(){
-    var $this = $(this);
-    $this.toggleClass('SeeMore2');
-    if($this.hasClass('SeeMore2')){
-      $this.text('See More');
-    } else {
-      $this.text('See Less');
-    }
-  });
 
-    </script>
   </head>
   <body ng-controller="firstController">
     <div id="profile">
@@ -38,9 +25,34 @@
             <div id="profile-overview-content">
               <div id="account">
                 <h1>{{mydata.name}}</h1>
-                <p class="title">{{mydata.job}}</p>
-                <a class="link" href="#">{{mydata.address}}</a>
-
+                <button id="edit" ng-click="editname()"></button>
+                <div id="popup" class="bubble" ng-show="displayname">
+          		    <h4>Name</h4>
+          		    <form id="editinformation">
+          		        <input type="text" ng-model="edit_name"></input>
+          		        <button class="btn btn-primary" ng-click="savename()">Save</button>
+          		        <button  class="btn" ng-click="displayname=false">Cancle</button>
+          		    </form>
+          	  	</div>
+                <p class="title">{{mydata.Job}}<button id="edit" ng-click="editjob()"></button></p>
+                <div id="popupJob" class="bubble" ng-show="displayjob">
+          		    <h4>Job</h4>
+          		    <form id="editinformation">
+          		        <input type="text" ng-model="edit_job"></input>
+          		        <button  class="btn btn-primary" ng-click="savejob()">Save</button>
+          		        <button  class="btn" ng-click="displayjob=false">Cancle</button>
+          		    </form>
+          	  	</div>
+                <h3>Information<button id="edit" ng-click="editinformation()"></button></h3>
+                <div id="popupinfor" class="bubble" ng-show="displayinformation">
+          		    <h4>Information</h4>
+          		    <form id="editinformation">
+          		        Birthdate:<input type="text" ng-model="edit_birthdate"></input>
+                      Address:<textarea ng-model="edit_address"></textarea>
+          		        <button  class="btn btn-primary" ng-click="saveinformation()">Save</button>
+          		        <button  class="btn" ng-click="displayinformation=false">Cancle</button>
+          		    </form>
+          	  	</div>
                 <table id="information">
                   <tr>
                     <th>
@@ -73,7 +85,7 @@
                     <td>
                       <ul id="lis">
                         <li>
-                          <a class="link" href="#">{{mydata.educations[0].name}}</a>
+                          <a class="link" href="#background-education">{{mydata.educations[0].name}}</a>
                         </li>
 
                       </ul>
@@ -118,10 +130,25 @@
         <div class="accordion" id="accordion2">
 
          <div class="accordion-group">
-          <div id="collapseTwo" class="accordion-body collapse in">
+          <div id="collapseTwo" class="accordion-body collapse">
 
               <div id="contact-info-section">
               <table id="internet-presence">
+                <tr class="web">
+                  <th>
+                      <h3>Contact<button id="edit" ng-click="editcontact()" ></button></h3>
+                      <div id="popupcontact" class="bubble" ng-show="displaycontact">
+                		    <h4>Contact</h4>
+                		    <form id="editinformation">
+                		        Email:<input type="email" ng-model="edit_email"></input>
+                            Website:<input type="text" ng-model="edit_website"></input>
+                            Phone:<input type="text" ng-model="edit_phone"></input>
+                		        <button  class="btn btn-primary" ng-click="savecontact()">Save</button>
+                		        <button  class="btn" ng-click="displaycontact=false">Cancle</button>
+                		    </form>
+                	  	</div>
+                  </th>
+                </tr>
                 <tr class="web">
                   <th>
                     <img src="pictures/email.png"/>
@@ -131,7 +158,7 @@
                 <tr class="web">
                   <th>
                     <img src="pictures/web.png"/>
-                    <a href="teamdas.esy.es" >{{mydata.contact.website}}</a>
+                    <a href="http://teamdas.esy.es" >{{mydata.contact.website}}</a>
                   </th>
                 </tr>
                 <tr class="web">
@@ -208,19 +235,39 @@
               <div class="summary-header">
                 <img src="pictures/borrow.png"/>
                 <h3> Summary</h3>
+
               </div>
               <div id="sumary-item">
-                <p>
-                  {{mydata.summary}}
-                </p>
+                <button id="edit" ng-click="editsummary()"></button>
+                <div id="content-sumary" ng-show="displaysummary">
+                  <h3>Summary</h3>
+                  <textarea id="expertise_comments-editExpertiseForm-error" cols="200" rows="12" ng-model="edit_summary"></textarea>
+                  <button  class="btn btn-primary" ng-click="savesummary()">Save</button>
+                  <button  class="btn" ng-click="displaysummary=false">Cancle</button>
+                </div>
+                <pre>{{mydata.summary}}</pre>
               </div>
             <div id="background-experience-container">
+
               <div class="summary-header">
                 <img src="pictures/borrow1.png"/>
                 <h3> Experience</h3>
+                <button class="edit-add" title="Click to add a new position" data-add-type="background-experience" data-trk="{ "componentKey" : "profile-edit-position-form", "source" : "prof-edit-background-add_position-link" }" onclick="DisplayExperence()">+ Add Expression</button>
+              </div>
+
+              <div class="content-experience">
+                <form>
+                  <b>Company Name:</b><input  type="text"></input>
+                  <b>Title:</b><input type="text"></input>
+                  <b>Location:</b><input type="text"></input>
+                  <b>Time Period:</b><input type="text"></input>
+                  <b>Description:</b><textarea style="width:95%;height:200px;"></textarea>
+                </form>
+                <button  class="btn btn-primary">Save</button>
+                <button  class="btn" onclick="CancelExperence()">Cancle</button>
               </div>
               <div class="experience-Director"ng-repeat="experience in mydata.experiences">
-              <div class = "experience-logo">
+            	<div class = "experience-logo">
                   <a href="#">
                     <strong>
                       <img src="{{experience.Logo}}" width="60" height="60"/>
@@ -234,89 +281,87 @@
                   <span>{{experience.time}}</span>
                 </div>
                 <div class="sumary-field-show-more">
-                  <p>
-                    {{experience.Describe}}
-                  </p>
-              </div>
+                  <pre>{{experience.Describe}}</pre>
+	            </div>
             </div>
             </div>
           </div>
-        </div>
-        <div id="background-Project">
-          <div class="summary-header">
-            <img src="pictures/project.png"/>
-            <h3>Project</h3>
-          </div>
-          <div class="content-project" ng-repeat="project in mydata.projects">
-                  <div class = "experience-logo">
-                    <a href="#">
-                      <strong>
-                        <img src="{{project.Logo}}" width="60" height="60"/>
-                      </strong>
+    		</div>
+    		<div id="background-Project">
+    			<div class="summary-header">
+    				<img src="pictures/project.png"/>
+    				<h3>Project</h3>
+    			</div>
+    			<div class="content-project" ng-repeat="project in mydata.projects">
+              		<div class = "experience-logo">
+	                  <a href="#">
+	                    <strong>
+	                      <img src="{{project.Logo}}" width="60" height="60"/>
+	                    </strong>
 
-                    </a>
-                  </div>
-                  <div class="experience-link">
-                    <h4><a href="#">{{project.name}}</a></h4>
-                    <br>
-                    <span><time>{{project.time}}</time></span>
-                  </div>
-                  <div class="sumary-field-show-more">
-                    <p>
-                      {{project.Describe}}
-                    </p>
-                </div>
-               </div>
-        </div>
-        <div id="background-skill">
-          <div class="summary-header">
-            <img src="pictures/skill.png"/>
-            <h3>Skill</h3>
-          </div>
-          <div id="profile-skill">
-            <h4>Top skill</h4>
-            <ul id="list-skill">
-              <li ng-repeat="skill in mydata.skills">
-                <div class="item-skill">99</div>
-                <div class="skill-pill">{{skill}}</div>
+	                  </a>
+	                </div>
+	              	<div class="experience-link">
+	                  <h4><a href="#">{{project.name}}</a></h4>
+	                  <br>
+	                  <span><time>{{project.time}}</time></span>
+	                </div>
+	                <div class="sumary-field-show-more">
+	                  <p>
+	                    {{project.Describe}}
+	                  </p>
+		            </div>
+	             </div>
+    		</div>
+    		<div id="background-skill">
+    			<div class="summary-header">
+    				<img src="pictures/skill.png"/>
+    				<h3>Skill</h3>
+    			</div>
+    			<div id="profile-skill">
+    				<h4>Top skill</h4>
+    				<ul id="list-skill">
+    					<li ng-repeat="skill in mydata.skills">
+    						<div class="item-skill">99</div>
+    						<div class="skill-pill">{{skill}}</div>
 
-            </ul>
-            <h4>Jeff also knows about</h4>
-            <ul id="skill-section">
-              <li ng-repeat="skill1 in mydata.differentskills">
-                <div class="item-skill">99</div>
-                <div class="skill-pill">{{skill1}}</div>
-              </li>
+    				</ul>
+    				<h4>Jeff also knows about</h4>
+    				<ul id="skill-section">
+    					<li ng-repeat="skill1 in mydata.differentskills">
+    						<div class="item-skill">99</div>
+    						<div class="skill-pill">{{skill1}}</div>
+    					</li>
 
-            </ul>
-          </div>
-        </div>
-        <div id="background-education">
-          <div class="summary-header">
-                  <img src="pictures/education.png"/>
-                  <h3> Education</h3>
+    				</ul>
+    			</div>
+    		</div>
+    		<div id="background-education">
+    			<div class="summary-header">
+	                <img src="pictures/education.png"/>
+	                <h3> Education</h3>
 
-                </div>
-                <div class="content-education" ng-repeat="education in mydata.educations">
-                  <div class = "experience-logo">
-                    <a href="#">
-                      <strong>
-                        <img src="{{education.logo}}" width="60" height="60"/>
-                      </strong>
-                    </a>
-                  </div>
-                  <div class="experience-link">
-                    <h4><a href="#">{{education.name}}</a></h4>
-                    <span><strong><a href="#">{{education.major}}</a></strong></span>
-                    <br>
-                    <span><time>{{education.graduate}}</time></span>
-                  </div>
-               </div>
-        </div>
-            </div>
-          </div>
-        </div>
-      </div>
+              	</div>
+              	<div class="content-education" ng-repeat="education in mydata.educations">
+              		<div class = "experience-logo">
+	                  <a href="#">
+	                    <strong>
+	                      <img src="{{education.logo}}" width="60" height="60"/>
+	                    </strong>
+	                  </a>
+	                </div>
+	              	<div class="experience-link">
+	                  <h4><a href="#">{{education.name}}</a></h4>
+	                  <span><strong><a href="#">{{education.major}}</a></strong></span>
+	                  <br>
+	                  <span><time>{{education.graduate}}</time></span>
+	                </div>
+	             </div>
+    		</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
     </div>
 
   </body>

@@ -9,6 +9,11 @@
   body{
     background: #e9e9e9;
   }
+  pre{
+    font-family: sans-serif;
+    font-size: 13px;
+    word-break: normal;
+  }
   #profile{
     width: 900px;
     height:auto;
@@ -18,6 +23,105 @@
   .accordion-group{
     background: white;
   }
+  #account{
+		position: relative;
+  }
+  #edit{
+    display: inline;
+		width: 27px;
+		height: 30px;
+    background: url("pictures/button.png");
+    }
+  #popup{
+    clear: left;
+		width: 250px;
+		height: auto;
+		border: 1px solid #ccc;
+		position: absolute;
+		margin-left: 230px;
+    margin-top:-40px;
+		box-shadow: 3px 3px 3px #ccc;
+		padding: 0px 0px 0px 10px;
+		background: white;
+	}
+  #popup > h4{
+		margin-top: 10px;
+	}
+  #popupJob{
+    clear: left;
+		width: 250px;
+		height: auto;
+		border: 1px solid #ccc;
+		position: absolute;
+		margin-left: 100px;
+    margin-top:-40px;
+		box-shadow: 3px 3px 3px #ccc;
+		padding: 0px 0px 0px 10px;
+		background: white;
+	}
+  #popupJob > h4{
+		margin-top: 10px;
+	}
+  #popupinfor{
+    clear: left;
+		width: 250px;
+		height: auto;
+		border: 1px solid #ccc;
+		position: absolute;
+		margin-left: 150px;
+    margin-top:-40px;
+		box-shadow: 3px 3px 3px #ccc;
+		padding: 0px 0px 0px 10px;
+		background: white;
+  }
+  #popupinfor > h4{
+		margin-top: 10px;
+	}
+  #popupcontact{
+    clear: left;
+		width: 250px;
+		height: auto;
+		border: 1px solid #ccc;
+		position: absolute;
+		margin-left: 110px;
+    margin-top:-50px;
+		box-shadow: 3px 3px 3px #ccc;
+		padding: 0px 0px 0px 10px;
+		background: white;
+	}
+  #popupcontact > h4{
+		margin-top: 10px;
+	}
+  .bubble {
+    position: relative;
+    width: 250px;
+    height: 100px;
+    padding: 0px;
+    background: white;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+		}
+
+	  .bubble:after {
+	    content: "";
+	    position: absolute;
+	    top: 7px;
+	    left: -15px;
+	    border-style: solid;
+	    border-width: 15px 15px 15px 0;
+	    border-color: transparent #ccc;
+	    display: block;
+	    width: 0;
+	    z-index: 1;
+		}
+		#editinformation{
+      display: block;
+			width: 	100%;
+			height: auto;
+			margin: 10px 0px 10px 0px;
+      z-index: 10;
+		}
   #topcard{
     width: 900px;
     height: 244px;
@@ -31,20 +135,26 @@
   #profile-overview{
     float: left;
     width: 648px;
-    height:auto;
-
+    overflow: hidden;
+    display: block;
+    height: auto;
   }
   #profile-overview-content{
     margin: 20px 0px 0px 30px;
     width: 500px;
-    height: 200px;
+    overflow: hidden;
+    display: block;
+    height: auto;
     float: left;
   }
   #profile-overview-content > #account > h1{
     font-size: 20px;
+    display: inline;
   }
   .title{
+
     font-size: 18px;
+
   }
   .link{
     color: black;
@@ -111,6 +221,7 @@
     float: left;
     margin: 8px 0px 0px 10px;
     width: 180px;
+    height: 100px;
   }
   #flower-count{
     font-size: 11px;
@@ -132,24 +243,35 @@
   }
   #contact-info-section{
     width: 100%;
-    height: 110px;
-
+    overflow: hidden;
+    display: block;
+    padding-bottom: 20px;
+    height: auto;
   }
+
   #contact-info-section .web th{
     text-align:left;
     font-weight: normal;
   }
+  #collapseTwo{
+    width: 100%;
+    padding-bottom:30px;
+  }
   #internet-presence{
     width: 242px;
-    height: 81px;
+    height: auto;
     margin: 20px 0px 0px 20px;
 
+  }
+  #internet-presence .web{
+    height: 45px;
   }
   #profile-actions{
     width: 100%;
     height: 40px;
     clear: left;
     border-top: 1px dashed black;
+    z-index: 1;
   }
   #public-profile{
     width: 730px;
@@ -250,7 +372,7 @@
     width: 100px;
   }
   .summary-header{
-    width: 600px;
+    width: 90%;
     height: 50px;
     margin: 10px 0px 10px 20px;
   }
@@ -301,6 +423,7 @@
     color: #434649;
     text-decoration: none;
   }
+
   .experience-link span strong a:hover{
     color: red;
   }
@@ -446,3 +569,60 @@
     padding-bottom: 20px;
     border-bottom: 1px solid black;
  }
+.edit-add{
+  font-weight: bold;
+    border-width: 1px;
+    border-style: solid;
+    cursor: pointer;
+    width: auto;
+    padding: 0 10px;
+    height: 26px;
+    line-height: 24px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 12px;
+    background-color: #f2f2f2;
+    border-color: #a7a7a7;
+    filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFF2F2F2', endColorstr='#FFD1D1D1');
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: middle;
+    zoom: 1;
+    margin-left: 5px;
+    float: right;
+    padding-top: 1px;
+    vertical-align: top;
+    color: #666;
+    border: 0;
+    text-shadow: none;
+    box-shadow: none;
+    border-radius: 0;
+}
+#content-sumary{
+  width: 100%;
+  height: 300px;
+}
+#expertise_comments-editExpertiseForm-error{
+  height: 200px;
+  width: 100%;
+}
+.content-experience{
+  width: 100%;
+  height: auto;
+  margin-left: 30px;
+  background: #e9e9e9;
+
+}
+.content-experience > form > b{
+  display:block;
+}
+.content-experience > form > input{
+  display:block;
+  width: 500px;
+}
+.content-experience > form > textarea{
+  display:block;
+  width: 500px;
+  height: 100px;
+}
