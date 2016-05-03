@@ -11,7 +11,7 @@ module.controller('firstController', function($scope, $http) {
 	$scope.displaysummary =false;
 	$scope.displayexperene = false;
 	$scope.displayproject = false;
-	$scope.displayeducation = false;
+	$scope.displayeducation = false; 
 	$scope.editname = function (){
 		$scope.edit_name = $scope.mydata.name;
 		$scope.displayname = true;
