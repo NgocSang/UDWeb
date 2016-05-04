@@ -29,18 +29,18 @@
                 <button class="edit" ng-click="editname()"></button>
                 <div id="popup" class="bubble" ng-show="displayname">
           		    <h4>Name</h4>
-          		    <form id="editinformation">
-          		        <input type="text" ng-model="edit_name"></input>
-          		        <button class="btn btn-primary" ng-click="savename()">Save</button>
+          		    <form id="editinformation" name="myformname">
+          		        <input type="text" ng-model="edit_name" required></input>
+          		        <button class="btn btn-primary" ng-click="savename()" ng-disabled = "myformname.$invalid">Save</button>
           		        <button  class="btn" ng-click="displayname=false">Cancle</button>
           		    </form>
           	  	</div>
                 <p class="title">{{mydata.Job}}<button class="edit" ng-click="editjob()"></button></p>
                 <div id="popupJob" class="bubble" ng-show="displayjob">
           		    <h4>Job</h4>
-          		    <form id="editinformation">
-          		        <input type="text" ng-model="edit_job"></input>
-          		        <button  class="btn btn-primary" ng-click="savejob()">Save</button>
+          		    <form id="editinformation" name="myformjob">
+          		        <input type="text" ng-model="edit_job" required></input>
+          		        <button  class="btn btn-primary" ng-click="savejob()" ng-disabled = "myformjob.$invalid">Save</button>
           		        <button  class="btn" ng-click="displayjob=false">Cancle</button>
           		    </form>
           	  	</div>
@@ -48,8 +48,8 @@
                 <div id="popupinfor" class="bubble" ng-show="displayinformation">
           		    <h4>Information</h4>
           		    <form id="editinformation" name="myforminformation">
-          		        Birthdate:<input type="date" ng-model="edit_birthdate"></input>
-                      Address:<textarea ng-model="edit_address"></textarea>
+          		        Birthdate:<input type="date" ng-model="edit_birthdate" required=""></input>
+                      Address:<textarea ng-model="edit_address" required=""></textarea>
           		        <button  class="btn btn-primary" ng-click="saveinformation()" ng-disabled = "myforminformation.$invalid">Save</button>
           		        <button  class="btn" ng-click="displayinformation=false">Cancle</button>
           		    </form>
@@ -141,9 +141,9 @@
                       <div id="popupcontact" class="bubble" ng-show="displaycontact">
                 		    <h4>Contact</h4>
                 		    <form id="editinformation" name="myformcontact">
-                		        Email:<input type="email" ng-model="edit_email"></input>
-                            Website:<input type="text" ng-model="edit_website"></input>
-                            Phone:<input type="text" ng-model="edit_phone"></input>
+                		        Email:<input type="email" ng-model="edit_email" required></input>
+                            Website:<input type="text" ng-model="edit_website" required></input>
+                            Phone:<input type="text" ng-model="edit_phone" required></input>
                 		        <button  class="btn btn-primary" ng-click="savecontact()" ng-disabled = "myformcontact.$invalid">Save</button>
                 		        <button  class="btn" ng-click="displaycontact=false">Cancle</button>
                 		    </form>
@@ -242,9 +242,11 @@
                 <button class="edit" ng-click="editsummary()"></button>
                 <div id="content-sumary" ng-show="displaysummary">
                   <h3>Summary</h3>
-                  <textarea id="expertise_comments-editExpertiseForm-error" cols="200" rows="12" ng-model="edit_summary"></textarea>
-                  <button  class="btn btn-primary" ng-click="savesummary()">Save</button>
-                  <button  class="btn" ng-click="displaysummary=false">Cancle</button>
+                  <form name="myformsummary">
+                    <textarea id="expertise_comments-editExpertiseForm-error" cols="200" rows="12" ng-model="edit_summary" required></textarea>
+                    <button  class="btn btn-primary" ng-click="savesummary()" ng-disabled = "myformsummary.$invalid">Save</button>
+                    <button  class="btn" ng-click="displaysummary=false" >Cancle</button>
+                  </form>
                 </div>
                 <pre>{{mydata.summary}}</pre>
               </div>
@@ -321,9 +323,7 @@
 	                  <span><time>Time {{project.time | date:'dd/MM/yyyy'}}</time></span>
 	                </div>
 	                <div class="sumary-field-show-more">
-	                  <p>
-	                    {{project.Describe}}
-	                  </p>
+	                  <pre>{{project.Describe}}</pre>
 		            </div>
 	             </div>
     		</div>
